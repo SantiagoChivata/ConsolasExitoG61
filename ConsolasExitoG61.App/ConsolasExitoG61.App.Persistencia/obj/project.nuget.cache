@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+pW5f6riKONUd1yoLTJ7I+Bi0aNLqKFAZ01ynBEYAnhongDP8Pu1nB3UT+EgQweMhWkOC0dienewjALBIdqi4w==",
+  "success": true,
+  "projectFilePath": "D:\\Documentos\\Grupo61\\ConsolasExitoG61\\ConsolasExitoG61.App\\ConsolasExitoG61.App.Persistencia\\ConsolasExitoG61.App.Persistencia.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SAGO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\SAGO\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

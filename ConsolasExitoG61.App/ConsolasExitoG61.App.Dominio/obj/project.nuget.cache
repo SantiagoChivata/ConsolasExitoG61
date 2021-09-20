@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "XweXJxP6+3IepYTb8mslU1AXmtfG3NmKzzTuYPuLKOp3xodHjAm/vdUURb0eNYGWqHKgnaKUa7z04XN+Pt14NQ==",
+  "success": true,
+  "projectFilePath": "D:\\Documentos\\Grupo61\\ConsolasExitoG61\\ConsolasExitoG61.App\\ConsolasExitoG61.App.Dominio\\ConsolasExitoG61.App.Dominio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SAGO\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\SAGO\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
