@@ -1,0 +1,12 @@
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\obj\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.csprojAssemblyReference.cache
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\obj\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.AssemblyInfoInputs.cache
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\obj\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.AssemblyInfo.cs
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\obj\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.csproj.CoreCompileInputs.cache
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\bin\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.deps.json
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\bin\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.dll
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\bin\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.pdb
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\bin\Debug\netstandard2.1\ConsolasExitoG61.App.Dominio.dll
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\bin\Debug\netstandard2.1\ConsolasExitoG61.App.Dominio.pdb
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\obj\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.csproj.CopyComplete
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\obj\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.dll
+D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Persistencia\obj\Debug\netstandard2.1\ConsolasExitoG61.App.Persistencia.pdb

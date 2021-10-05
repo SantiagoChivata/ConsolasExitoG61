@@ -1,0 +1,96 @@
+@page
+@model ConsolasExitoG61.App.Presentacion.Pages.CrudEmpleado.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].CodEmpleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].accesoReportes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Nombres)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Apellidos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Edad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Cedula)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Clave)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleado[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Empleado) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodEmpleado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accesoReportes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellidos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Edad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cedula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clave)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

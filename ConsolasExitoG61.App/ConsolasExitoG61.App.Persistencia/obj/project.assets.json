@@ -5,7 +5,7 @@
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Humanizer.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {}
@@ -132,7 +132,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "5.0.0"
         },
         "compile": {
-          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
+          "lib/netstandard2.1/_._": {}
         },
         "runtime": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Design.dll": {}
@@ -2067,6 +2067,16 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "ConsolasExitoG61.App.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ConsolasExitoG61.App.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConsolasExitoG61.App.Dominio.dll": {}
         }
       }
     }
@@ -7236,13 +7246,19 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ConsolasExitoG61.App.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../ConsolasExitoG61.App.Dominio/ConsolasExitoG61.App.Dominio.csproj",
+      "msbuildProject": "../ConsolasExitoG61.App.Dominio/ConsolasExitoG61.App.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "Microsoft.EntityframeworkCore >= 5.0.0",
-      "Microsoft.EntityframeworkCore.Design >= 5.0.0",
-      "Microsoft.EntityframeworkCore.SqlServer >= 5.0.0",
+      "ConsolasExitoG61.App.Dominio >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 5.0.0",
+      "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityframeworkCore.Tools >= 5.0.0"
     ]
   },
@@ -7269,7 +7285,11 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Documentos\\Grupo61\\ConsolasExitoG61\\ConsolasExitoG61.App\\ConsolasExitoG61.App.Dominio\\ConsolasExitoG61.App.Dominio.csproj": {
+              "projectPath": "D:\\Documentos\\Grupo61\\ConsolasExitoG61\\ConsolasExitoG61.App\\ConsolasExitoG61.App.Dominio\\ConsolasExitoG61.App.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -7281,17 +7301,17 @@
     "frameworks": {
       "netstandard2.1": {
         "dependencies": {
-          "Microsoft.EntityframeworkCore": {
+          "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.0, )"
           },
-          "Microsoft.EntityframeworkCore.Design": {
+          "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.0, )"
           },
-          "Microsoft.EntityframeworkCore.SqlServer": {
+          "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[5.0.0, )"
           },
