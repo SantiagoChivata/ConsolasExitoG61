@@ -40,7 +40,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudEmpleado
             {
                 return Page();
             }
-
+            Empleado.primerIngreso = true;
             _context.empleado.Add(Empleado);
             await _context.SaveChangesAsync();
 

@@ -24,9 +24,11 @@ namespace ConsolasExitoG61.App.Presentacion
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
-            
+            services.AddRazorPages();            
             services.AddDbContext<Conexion>();
+            services.AddHttpContextAccessor();
+            services.AddSession();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +52,8 @@ namespace ConsolasExitoG61.App.Presentacion
 
             app.UseAuthorization();
 
+            app.UseSession();
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();

@@ -7259,7 +7259,7 @@
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
-      "Microsoft.EntityframeworkCore.Tools >= 5.0.0"
+      "Microsoft.EntityFrameworkCore.Tools >= 5.0.0"
     ]
   },
   "packageFolders": {
@@ -7315,7 +7315,7 @@
             "target": "Package",
             "version": "[5.0.0, )"
           },
-          "Microsoft.EntityframeworkCore.Tools": {
+          "Microsoft.EntityFrameworkCore.Tools": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
