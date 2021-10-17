@@ -1,9 +1,0 @@
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\bin\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.deps.json
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\bin\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.dll
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\bin\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.pdb
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\obj\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.csprojAssemblyReference.cache
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\obj\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.AssemblyInfoInputs.cache
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\obj\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.AssemblyInfo.cs
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\obj\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.csproj.CoreCompileInputs.cache
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\obj\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.dll
-D:\Documentos\Grupo61\ConsolasExitoG61\ConsolasExitoG61.App\ConsolasExitoG61.App.Dominio\obj\Debug\netstandard2.0\ConsolasExitoG61.App.Dominio.pdb

@@ -49,7 +49,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages
 
                     }
 
-                HttpContext.Session.SetString("usuarioAutenticado", "Autenticado");
+                HttpContext.Session.SetString("usuarioAutenticado", empleado.Cargo.ToString());
 
                 switch(empleado.Cargo){
                     case Cargo.ADMIISTRADOR_COMPRAS:
