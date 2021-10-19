@@ -12,6 +12,12 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudConsola
 {
     public class IndexModel : PageModel
     {
+        public String NombreSort {get; set;}
+
+        public String VersionSort {get; set;}
+
+        public String Busqueda {get; set;}
+
         private readonly ConsolasExitoG61.App.Persistencia.Conexion _context;
 
         public IndexModel(ConsolasExitoG61.App.Persistencia.Conexion context)
@@ -21,9 +27,23 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudConsola
 
         public IList<Consola> Consola { get;set; }
 
-        public async Task OnGetAsync()
+        public void  OnGet(string sortOrder, string Busqueda)
         {
-            Consola = await _context.consola.ToListAsync();
+            NombreSort = String.IsNullOrEmpty(sortOrder) ? "nombre_sort": "";
+            VersionSort = String.IsNullOrEmpty(sortOrder) ? "version_sort": "";
+            List<Consola> consoleOrder = _context.consola.ToList();
+
+            if(!String.IsNullOrEmpty(Busqueda)){
+                consoleOrder = _context.consola.Where(c => c.Nombre == Busqueda).ToList();
+            }            
+            if(NombreSort != null && NombreSort.Equals("nombre_sort")){
+                consoleOrder =  consoleOrder.OrderBy(c => c.Nombre).ToList();
+            }else if(VersionSort != null && VersionSort.Equals("version_sort")){
+                consoleOrder =  consoleOrder.OrderBy(c => c.Version).ToList();
+            }else{
+                consoleOrder =  consoleOrder.ToList();
+            } 
+            Consola = consoleOrder.ToList();  
         }
     }
 }

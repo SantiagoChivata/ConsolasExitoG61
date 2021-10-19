@@ -59,7 +59,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages
                     case Cargo.ADMINISTRADOR_SISTEMA:
                         return RedirectToPage("../CrudEmpleado/Index");
                     case Cargo.VENDEDOR:
-                        return RedirectToPage("../CrudVideoJuego/Index");
+                        return RedirectToPage("../CrudFactura/Index");
                     default:
                     return RedirectToPage("../Index");
                     }

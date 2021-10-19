@@ -2,7 +2,7 @@ namespace ConsolasExitoG61.App.Dominio.Entidades
 {
     public class VideoJuego
     {
-        public int id {get; set;}
+        public int Id {get; set;}
         public string Nombre{get; set;}
         public string Multiplataforma{get;set;}
         public string Version{get;set;}

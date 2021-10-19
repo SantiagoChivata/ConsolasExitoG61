@@ -28,7 +28,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudVideoJuego
                 return NotFound();
             }
 
-            VideoJuego = await _context.videoJuego.FirstOrDefaultAsync(m => m.id == id);
+            VideoJuego = await _context.videoJuego.FirstOrDefaultAsync(m => m.Id == id);
 
             if (VideoJuego == null)
             {

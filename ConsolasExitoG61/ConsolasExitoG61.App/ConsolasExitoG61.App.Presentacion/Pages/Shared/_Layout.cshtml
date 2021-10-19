@@ -21,6 +21,7 @@
                          
                             @using Microsoft.AspNetCore.Http
                             @inject IHttpContextAccessor HttpContextAccessor
+                            
                             @if (@HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado") != null
                             && @HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado").Equals("ADMINISTRADOR_COMPRAS"))
                             {                       
@@ -39,25 +40,33 @@
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-page="/Login/CerrarSesion">Cerrar Sesión</a>
                                 </li>                                                
-                        }
-                        else if (@HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado") != null
-                        && @HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado").Equals("ADMINISTRADOR_SISTEMA"))
-                        {
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudEmpleado/Index">Empleados</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudSucursal/Index">Sucursales</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/CrudCliente/Index">Clientes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Login/CerrarSesion">Cerrar Sesión</a>
-                        </li>
-
-                        }
+                            }
+                            else if (@HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado") != null
+                            && @HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado").Equals("ADMINISTRADOR_SISTEMA"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/CrudEmpleado/Index">Empleados</a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/CrudSucursal/Index">Sucursales</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/CrudCliente/Index">Clientes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Login/CerrarSesion">Cerrar Sesión</a>
+                                </li>
+                            }else if (@HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado") != null
+                            && @HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado").Equals("VENDEDOR"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/CrudFactura/Index">Factura</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/Login/CerrarSesion">Cerrar Sesión</a>
+                                </li>
+                            }
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
                         </li>

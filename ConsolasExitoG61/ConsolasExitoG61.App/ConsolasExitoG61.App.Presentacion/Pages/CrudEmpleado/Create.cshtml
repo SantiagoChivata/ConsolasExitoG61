@@ -62,12 +62,12 @@
             <div class="form-group">
                 <label asp-for="Empleado.Usuario" class="control-label"></label>
                 <input asp-for="Empleado.Usuario" class="form-control" />
-                <span asp-validation-for="Empleado.Usuario" class="text-danger"></span>
+                <span asp-validation-for="Empleado.Usuario" class="text-danger">@Model.usuarioExistente</span>
             </div>
             <div class="form-group">
                 <label asp-for="Empleado.Clave" class="control-label"></label>
-                <input asp-for="Empleado.Clave" class="form-control" />
-                <span asp-validation-for="Empleado.Clave" class="text-danger"></span>
+                <input asp-for="Empleado.Clave" type = "password" class="form-control" />
+                <span asp-validation-for="Empleado.Clave"  class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Empleado.Email" class="control-label"></label>
@@ -76,7 +76,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="Empleado.Sucursal" class="control-label"></label>
-                <select asp-for="Empleado.Sucursal" class="form-control" asp-items="Model.SucursalesFront"> </select>
+                <select asp-for="Empleado.Sucursal" class="form-control" asp-items="Model.SucursalesFront">
+                    <option>Seleccione una sucursal</option>
+                </select>
                 <span asp-validation-for="Empleado.Sucursal" class="text-danger"></span>
             </div>
             <div class="form-group">

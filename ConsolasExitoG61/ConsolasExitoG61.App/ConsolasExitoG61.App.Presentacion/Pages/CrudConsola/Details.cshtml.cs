@@ -28,7 +28,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudConsola
                 return NotFound();
             }
 
-            Consola = await _context.consola.FirstOrDefaultAsync(m => m.id == id);
+            Consola = await _context.consola.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Consola == null)
             {

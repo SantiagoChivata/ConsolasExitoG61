@@ -30,7 +30,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudVideoJuego
                 return NotFound();
             }
 
-            VideoJuego = await _context.videoJuego.FirstOrDefaultAsync(m => m.id == id);
+            VideoJuego = await _context.videoJuego.FirstOrDefaultAsync(m => m.Id == id);
 
             if (VideoJuego == null)
             {
@@ -56,7 +56,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudVideoJuego
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!VideoJuegoExists(VideoJuego.id))
+                if (!VideoJuegoExists(VideoJuego.Id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudVideoJuego
 
         private bool VideoJuegoExists(int id)
         {
-            return _context.videoJuego.Any(e => e.id == id);
+            return _context.videoJuego.Any(e => e.Id == id);
         }
     }
 }

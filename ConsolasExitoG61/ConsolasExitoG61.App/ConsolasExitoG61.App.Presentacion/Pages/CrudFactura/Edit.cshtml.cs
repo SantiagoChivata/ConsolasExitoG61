@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using ConsolasExitoG61.App.Dominio.Entidades;
 using ConsolasExitoG61.App.Persistencia;
 
-namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
+namespace ConsolasExitoG61.App.Presentacion.Pages.CrudFactura
 {
     public class EditModel : PageModel
     {
@@ -21,7 +21,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
         }
 
         [BindProperty]
-        public Control Control { get; set; }
+        public Factura Factura { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -30,9 +30,9 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
                 return NotFound();
             }
 
-            Control = await _context.control.FirstOrDefaultAsync(m => m.Id == id);
+            Factura = await _context.factura.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (Control == null)
+            if (Factura == null)
             {
                 return NotFound();
             }
@@ -48,7 +48,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
                 return Page();
             }
 
-            _context.Attach(Control).State = EntityState.Modified;
+            _context.Attach(Factura).State = EntityState.Modified;
 
             try
             {
@@ -56,7 +56,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ControlExists(Control.Id))
+                if (!FacturaExists(Factura.Id))
                 {
                     return NotFound();
                 }
@@ -69,9 +69,9 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
             return RedirectToPage("./Index");
         }
 
-        private bool ControlExists(int id)
+        private bool FacturaExists(int id)
         {
-            return _context.control.Any(e => e.Id == id);
+            return _context.factura.Any(e => e.Id == id);
         }
     }
 }

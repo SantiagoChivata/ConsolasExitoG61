@@ -10,11 +10,21 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+<form asp-page="./Index" method="get">
+    <div class="form-group">   
+    <label>Busqueda por nombre:</label>
+        <input type="text" name="Busqueda" value="@Model.Busqueda" />
+        <input type="submit" value="Buscar" class="btn btn-primary"/>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NombreSort">
                 @Html.DisplayNameFor(model => model.Consola[0].Nombre)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Consola[0].Referencia)
@@ -23,7 +33,9 @@
                 @Html.DisplayNameFor(model => model.Consola[0].Marca)
             </th>
             <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.VersionSort">
                 @Html.DisplayNameFor(model => model.Consola[0].Version)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Consola[0].Fabricante)
@@ -80,9 +92,9 @@
                 @Html.DisplayFor(modelItem => item.PrecioVenta)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.id">Delete</a>
+                <a asp-page="./Edit" asp-route-Id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-Id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-Id="@item.Id">Delete</a>
             </td>
         </tr>
 }

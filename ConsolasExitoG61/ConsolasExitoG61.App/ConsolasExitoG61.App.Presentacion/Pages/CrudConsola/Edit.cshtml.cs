@@ -30,7 +30,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudConsola
                 return NotFound();
             }
 
-            Consola = await _context.consola.FirstOrDefaultAsync(m => m.id == id);
+            Consola = await _context.consola.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Consola == null)
             {
@@ -56,7 +56,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudConsola
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ConsolaExists(Consola.id))
+                if (!ConsolaExists(Consola.Id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudConsola
 
         private bool ConsolaExists(int id)
         {
-            return _context.consola.Any(e => e.id == id);
+            return _context.consola.Any(e => e.Id == id);
         }
     }
 }

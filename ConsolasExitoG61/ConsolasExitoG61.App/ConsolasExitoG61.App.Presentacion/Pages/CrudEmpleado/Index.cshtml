@@ -14,7 +14,9 @@
     <thead>
         <tr>
             <th>
+                
                 @Html.DisplayNameFor(model => model.Empleado[0].CodEmpleado)
+                
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Empleado[0].Cargo)
@@ -23,7 +25,9 @@
                 @Html.DisplayNameFor(model => model.Empleado[0].accesoReportes)
             </th>
             <th>
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NombreSort">
                 @Html.DisplayNameFor(model => model.Empleado[0].Nombres)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Empleado[0].Apellidos)
@@ -89,7 +93,7 @@
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Sucursal.Id)
+                @Html.DisplayFor(modelItem => item.Sucursal.Nombre)
             </td>
             <td>
                 <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |

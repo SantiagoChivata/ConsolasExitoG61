@@ -21,7 +21,7 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
 
             modelBuilder.Entity("ConsolasExitoG61.App.Dominio.Entidades.Consola", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -59,7 +59,7 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
                     b.Property<string>("Version")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.HasIndex("ProveedorId");
 
@@ -68,7 +68,7 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
 
             modelBuilder.Entity("ConsolasExitoG61.App.Dominio.Entidades.Control", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -88,7 +88,7 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
                     b.Property<string>("Tipo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.HasIndex("ProveedorId");
 
@@ -108,10 +108,10 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
                     b.Property<int?>("ClienteId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Consolaid")
+                    b.Property<int?>("ConsolaId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("Controlid")
+                    b.Property<int?>("ControlId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("Fecha")
@@ -126,20 +126,20 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
                     b.Property<int?>("VendedorId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("VideoJuegoid")
+                    b.Property<int?>("VideoJuegoId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ClienteId");
 
-                    b.HasIndex("Consolaid");
+                    b.HasIndex("ConsolaId");
 
-                    b.HasIndex("Controlid");
+                    b.HasIndex("ControlId");
 
                     b.HasIndex("VendedorId");
 
-                    b.HasIndex("VideoJuegoid");
+                    b.HasIndex("VideoJuegoId");
 
                     b.ToTable("factura");
                 });
@@ -242,7 +242,7 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
 
             modelBuilder.Entity("ConsolasExitoG61.App.Dominio.Entidades.VideoJuego", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .UseIdentityColumn();
@@ -268,7 +268,7 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
                     b.Property<string>("Version")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
                     b.HasIndex("ProveedorId");
 
@@ -341,11 +341,11 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
 
                     b.HasOne("ConsolasExitoG61.App.Dominio.Entidades.Consola", "Consola")
                         .WithMany()
-                        .HasForeignKey("Consolaid");
+                        .HasForeignKey("ConsolaId");
 
                     b.HasOne("ConsolasExitoG61.App.Dominio.Entidades.Control", "Control")
                         .WithMany()
-                        .HasForeignKey("Controlid");
+                        .HasForeignKey("ControlId");
 
                     b.HasOne("ConsolasExitoG61.App.Dominio.Entidades.Empleado", "Vendedor")
                         .WithMany()
@@ -353,7 +353,7 @@ namespace ConsolasExitoG61.App.Persistencia.Migrations
 
                     b.HasOne("ConsolasExitoG61.App.Dominio.Entidades.VideoJuego", "VideoJuego")
                         .WithMany()
-                        .HasForeignKey("VideoJuegoid");
+                        .HasForeignKey("VideoJuegoId");
 
                     b.Navigation("Cliente");
 

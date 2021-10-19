@@ -1,0 +1,84 @@
+@page
+@model ConsolasExitoG61.App.Presentacion.Pages.CrudFactura.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Factura</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Factura.Fecha" class="control-label"></label>
+                <input asp-for="Factura.Fecha" class="form-control" />
+                <span asp-validation-for="Factura.Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factura.Cliente" class="control-label"></label>
+                <select asp-for="Factura.Cliente" class="form-control" asp-items="Model.ClienteFront">
+                    <option>Seleccione un cliente</option>
+                </select>
+                <span asp-validation-for="Factura.Cliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factura.Vendedor" class="control-label"></label>
+                <select asp-for="Factura.Vendedor" class="form-control" asp-items="Model.EmpleadoFront">
+                    <option>Seleccione un vendedor</option>
+                </select>
+                <span asp-validation-for="Factura.Vendedor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factura.Consola" class="control-label"></label>
+                <select asp-for="Factura.Consola" class="form-control" asp-items="Model.ConsolaFront">
+                    <option>Seleccione una Consola</option>
+                </select>
+                <span asp-validation-for="Factura.Consola" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factura.Control" class="control-label"></label>
+                <select asp-for="Factura.Control" class="form-control" asp-items="Model.ControlFront">
+                    <option>Seleccione un control</option>
+                </select>
+                <span asp-validation-for="Factura.Control" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factura.VideoJuego" class="control-label"></label>
+                <select asp-for="Factura.VideoJuego" class="form-control" asp-items="Model.VideoJuegoFront">
+                    <option>Seleccione un Video Juego</option>
+                </select>
+                <span asp-validation-for="Factura.VideoJuego" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factura.Cantidad" class="control-label"></label>
+                <input asp-for="Factura.Cantidad" class="form-control" />
+                <span asp-validation-for="Factura.Cantidad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factura.ValorUnitario" class="control-label"></label>
+                <input asp-for="Factura.ValorUnitario" class="form-control" />
+                <span asp-validation-for="Factura.ValorUnitario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Factura.ValorTotal" class="control-label"></label>
+                <input asp-for="Factura.ValorTotal" class="form-control" />
+                <span asp-validation-for="Factura.ValorTotal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

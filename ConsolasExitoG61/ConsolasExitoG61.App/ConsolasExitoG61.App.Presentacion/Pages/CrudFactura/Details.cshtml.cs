@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ConsolasExitoG61.App.Dominio.Entidades;
 using ConsolasExitoG61.App.Persistencia;
 
-namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
+namespace ConsolasExitoG61.App.Presentacion.Pages.CrudFactura
 {
     public class DetailsModel : PageModel
     {
@@ -19,7 +19,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
             _context = context;
         }
 
-        public Control Control { get; set; }
+        public Factura Factura { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -28,9 +28,9 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudControl
                 return NotFound();
             }
 
-            Control = await _context.control.FirstOrDefaultAsync(m => m.Id == id);
+            Factura = await _context.factura.FirstOrDefaultAsync(m => m.Id == id);
 
-            if (Control == null)
+            if (Factura == null)
             {
                 return NotFound();
             }

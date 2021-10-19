@@ -12,6 +12,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudEmpleado
 {
     public class IndexModel : PageModel
     {
+        public String NombreSort {get; set;}
         private readonly ConsolasExitoG61.App.Persistencia.Conexion _context;
 
         public IndexModel(ConsolasExitoG61.App.Persistencia.Conexion context)
@@ -21,10 +22,15 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudEmpleado
 
         public IList<Empleado> Empleado { get;set; }
 
-        public async Task OnGetAsync()
+        public void OnGet(string sortOrder)
         {
-            
-            Empleado = await _context.empleado.ToListAsync();
+            NombreSort = String.IsNullOrEmpty(sortOrder) ? "nombre_sort": "";
+            List<Empleado> consoleOrder = _context.empleado.Include(s => s.Sucursal).ToList();
+            if (NombreSort != null && NombreSort.Equals("nombre_sort"))
+            {
+                consoleOrder = consoleOrder.OrderBy(e => e.Nombres).ToList();
+            }
+            Empleado = consoleOrder.ToList();
         }
     }
 }

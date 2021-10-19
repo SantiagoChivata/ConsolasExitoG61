@@ -16,6 +16,10 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudEmpleado
 
         public SelectList SucursalesFront;
 
+        public int SucuralId{get; set;}
+
+        public string usuarioExistente{get; set;}
+
         public CreateModel(ConsolasExitoG61.App.Persistencia.Conexion context)
         {
             _context = context;
@@ -40,11 +44,22 @@ namespace ConsolasExitoG61.App.Presentacion.Pages.CrudEmpleado
             {
                 return Page();
             }
-            Empleado.primerIngreso = true;
-            _context.empleado.Add(Empleado);
-            await _context.SaveChangesAsync();
+            Empleado verificarUsuario = _context.empleado.FirstOrDefault(e => e.Usuario == Empleado.Usuario);
+            if (verificarUsuario != null)
+            {
+                 usuarioExistente ="El nombre de usuario ya esta en uso";
+                 return Page();
+            }else{
+                Sucursal sucursal = _context.sucursal.FirstOrDefault(s => s.Id == SucuralId);
+                Empleado.Sucursal = sucursal;
+                Empleado.primerIngreso = true;
+                _context.empleado.Add(Empleado);
+                await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+                return RedirectToPage("./Index");
+
+            }
+            
         }
     }
 }
