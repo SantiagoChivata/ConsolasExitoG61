@@ -53,7 +53,7 @@ namespace ConsolasExitoG61.App.Presentacion.Pages
 
                 switch(empleado.Cargo){
                     case Cargo.ADMIISTRADOR_COMPRAS:
-                        return RedirectToPage("../CrudConsola/Index");
+                        return RedirectToPage("../CrudProveedor/Index");
                     case Cargo.ADMINISTRADOR_VENTAS:
                         return RedirectToPage("../CrudProveedor/Index");
                     case Cargo.ADMINISTRADOR_SISTEMA:

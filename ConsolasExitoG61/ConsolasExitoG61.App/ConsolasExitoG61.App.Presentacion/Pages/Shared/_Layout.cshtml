@@ -23,7 +23,7 @@
                             @inject IHttpContextAccessor HttpContextAccessor
                             
                             @if (@HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado") != null
-                            && @HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado").Equals("ADMINISTRADOR_COMPRAS"))
+                            && @HttpContextAccessor.HttpContext.Session.GetString("usuarioAutenticado").Equals("ADMIISTRADOR_COMPRAS"))
                             {                       
                                 <li class="nav-item">
                                     <a class="nav-link text-dark" asp-area="" asp-page="/CrudConsola/Index">Consolas</a>
